@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Helper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <h1>🧠 Advanced Decision Helper</h1>
+        <button id="theme-toggle">Switch to Dark Mode</button>
+        
+        <!-- Progress Indicator -->
+        <div class="progress">
+            <div class="progress-step active" id="step1">1. Category</div>
+            <div class="progress-step" id="step2">2. Situation</div>
+            <div class="progress-step" id="step3">3. Options</div>
+            <div class="progress-step" id="step4">4. Values</div>
+            <div class="progress-step" id="step5">5. Results</div>
+        </div>
+        
+        <!-- Step 1: Category Selection -->
+        <div class="step" id="step-category">
+            <h2>Select Decision Category</h2>
+            <select id="category-select">
+                <option value="">Choose Category</option>
+                <option value="career">Career</option>
+                <option value="love">Love</option>
+                <option value="money">Money</option>
+                <option value="health">Health</option>
+                <option value="personal">Personal Growth</option>
+            </select>
+            <button id="next-category">Next</button>
+        </div>
+        
+        <!-- Step 2: Situation Input -->
+        <div class="step hidden" id="step-situation">
+            <h2>Describe Your Situation</h2>
+            <textarea id="situation-input" placeholder="What's the decision you're facing? Be detailed for better analysis."></textarea>
+            <button id="next-situation">Next</button>
+        </div>
+        
+        <!-- Step 3: Options Input -->
+        <div class="step hidden" id="step-options">
+            <h2>Enter Options to Compare</h2>
+            <div id="options-list">
+                <div class="option-item">
+                    <input type="text" placeholder="Option 1" class="option-input">
+                    <textarea placeholder="Pros (e.g., benefits)" class="pros-input"></textarea>
+                    <textarea placeholder="Cons (e.g., drawbacks)" class="cons-input"></textarea>
+                </div>
+            </div>
+            <button id="add-option">Add Another Option</button>
+            <button id="next-options">Next</button>
+        </div>
+        
+        <!-- Step 4: Values Selection -->
+        <div class="step hidden" id="step-values">
+            <h2>Select Your Top Values (for weighting)</h2>
+            <div class="checkboxes">
+                <label><input type="checkbox" value="money"> Money</label>
+                <label><input type="checkbox" value="peace"> Peace</label>
+                <label><input type="checkbox" value="growth"> Growth</label>
+                <label><input type="checkbox" value="love"> Love</label>
+                <label><input type="checkbox" value="stability"> Stability</label>
+            </div>
+            <button id="analyze">Analyze Decision</button>
+        </div>
+        
+        <!-- Step 5: Results -->
+        <div class="step hidden" id="step-results">
+            <h2>Your Decision Analysis</h2>
+            <div id="analysis">
+                <div class="confidence">
+                    <h3>Decision Confidence Score</h3>
+                    <div class="meter">
+                        <div class="meter-fill" id="confidence-fill"></div>
+                    </div>
+                    <span id="confidence-percent"></span>
+                </div>
+                <div class="balance">
+                    <h3>Emotion vs Logic Balance</h3>
+                    <div class="meter">
+                        <div class="meter-fill" id="balance-fill"></div>
+                    </div>
+                    <span id="balance-label"></span>
+                </div>
+                <div class="regret">
+                    <h3>Regret Probability</h3>
+                    <span id="regret-level"></span>
+                </div>
+                <div class="bias">
+                    <h3>Cognitive Bias Detected</h3>
+                    <p id="bias-detected"></p>
+                </div>
+                <div class="options-results">
+                    <h3>Recommended Options</h3>
+                    <p><strong>Best Option:</strong> <span id="best-option"></span></p>
+                    <p><strong>Second-Best:</strong> <span id="second-option"></span></p>
+                    <p><strong>Avoid:</strong> <span id="avoid-option"></span></p>
+                    <p><strong>Why This is Best:</strong> <span id="explanation"></span></p>
+                    <p><strong>Time-Based Advice:</strong> <span id="time-advice"></span></p>
+                </div>
+                <div class="action-plan">
+                    <h3>Mini Action Plan</h3>
+                    <ol id="plan-steps"></ol>
+                </div>
+            </div>
+            <button id="save-decision">Save Decision</button>
+            <button id="export-image">Export as Image</button>
+        </div>
+        
+        <!-- History -->
+        <div class="history hidden" id="history-section">
+            <h2>Decision History</h2>
+            <ul id="history-list"></ul>
+        </div>
+        
+        <div class="nav-buttons">
+            <button id="show-history">View History</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
