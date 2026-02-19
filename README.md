@@ -14,11 +14,13 @@ Mobile-friendly design
 
 #🛠️ Tech Stack
 
-HTML • CSS • JavaScript
+• HTML 
+• CSS 
+• JavaScript
 
-#🌐 Live Demo
+🌐 Live Demo
 
-🔗 [https://your-username.github.io/decision-helper/](https://github.com/nehajaiz/Decision-Helper-Website/)
+https://github.com/nehajaiz/Decision-Helper-Website/
 
 #📸 Screenshots
 
