@@ -26,4 +26,5 @@ https://github.com/nehajaiz/Decision-Helper-Website/
 
 🎯 Why This Project?
 
-Built to help people overcome overthinking and make clear, confident decisions in daily life.
+Built to help people overcome overthinking and make clear,
+confident decisions in daily life.
